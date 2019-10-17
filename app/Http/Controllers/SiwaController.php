@@ -25,9 +25,6 @@ class SiwaController extends Controller
         // get abstract user object, not persisted
         $user = Socialite::driver("sign-in-with-apple")
             ->user();
-        
-        // or use Socialiter to automatically manage user resolution and persistance
-        $user = Socialiter::driver("sign-in-with-apple")
-            ->login();
+        dd($user);
     }
 }
